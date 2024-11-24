@@ -1,0 +1,163 @@
+body {
+  background-color: #222;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  text-align: center;
+  padding: 50px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+
+.social {
+  margin-top: 30px;
+}
+
+.social a {
+  color: #fff;
+  margin: 0 10px;
+}
+
+
+
+
+
+  
+
+
+.image-container {
+  display: grid; /* Використовуємо grid для розташування елементів */
+  grid-template-columns: repeat(3, 1fr); /* Три стовпці */
+  gap: 20px; /* Відстань між елементами */
+  justify-items: center; /* Центруємо елементи в стовпцях */
+  margin: 0 auto; /* Центруємо контейнер */
+}
+
+.image-item {
+  display: flex; /* Використовуємо flexbox */
+  flex-direction: column; /* Елементи розташовуються в колонку */
+  align-items: center; /* Центруємо елементи по горизонталі */
+  text-align: center;
+  width: 200px; /* Контейнер відповідає ширині зображення */
+  
+}
+
+
+
+/* Інші стилі залишаються такими ж */
+
+/* Інші стилі залишаються такими ж */
+
+/* Інші стилі залишаються без змін */
+
+img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+  opacity: 0; /* Початковий стан: невидимий */
+  transform: scale(0.8); /* Початковий стан: зменшений */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Плавні переходи */
+}
+
+/* Клас для анімації при наведенні */
+img.hover-animation {
+  transform: scale(1.1); /* Збільшуємо зображення */
+  opacity: 1; /* Зробити зображення повністю видимим */
+}
+
+/* Клас для анімації при завантаженні */
+img.animate {
+  opacity: 1; /* Видимий стан */
+  transform: scale(1); /* Стандартний розмір */
+}
+
+
+img:hover {
+  transform: scale(1.1); /* Збільшуємо зображення при наведенні */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Збільшуємо тінь */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавніший перехід */
+}
+
+
+.btn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  border: none;
+  border-radius: 0 0 10px 10px;
+  cursor: pointer;
+  width: 100%; /* Кнопка займає всю ширину контейнера */
+  text-align: center;
+}
+
+.btn:hover {
+  transform: scale(1.1); /* Анімація при наведенні */
+  background-color: #ffffff; /* Зміна кольору кнопки */
+}
+
+/* Адаптація для мобільних пристроїв */
+@media (max-width: 900px) {
+  .image-container {
+    grid-template-columns: repeat(2, 1fr); /* Два стовпці */
+  }
+}
+
+@media (max-width: 600px) {
+  .image-container {
+    grid-template-columns: 1fr; /* Один стовпець */
+  }
+}
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.key-press-animation-scale {
+  animation: scaleUp 0.5s ease-in-out;
+}
+
+.key-press-animation-rotate {
+  animation: rotate 1s ease-in-out;
+}
+
